@@ -1,7 +1,7 @@
 ## Pengelolaan Anime Tenki No Ko
 ### Gambar Website :
 <h2>Login</h2>
-![Login](asset/readme/login.png)
+![Login](./asset/readme/login.png)
 
 <h2>Dashboard</h2>
 ![Dashboard](asset/readme/dashboard.png)
