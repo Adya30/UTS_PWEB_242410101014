@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="px-6 py-7">
+
     <div class="dash py-5 px-5 rounded-2xl text-white mb-3">
         <div class="bg-blue-500/50 p-5 w-70 rounded-xl shadow text-shadow-amber-50">
             <h2 class="text-2xl font-bold">Dashboard</h2>
@@ -21,6 +22,7 @@
         </div>
         @endforeach
     </div>
+
 </div>
 
 @endsection

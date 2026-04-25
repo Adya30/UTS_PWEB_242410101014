@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Pengelolaan Episode')
+
 @section('content')
 <div class="px-6 py-7">
 
@@ -24,6 +26,7 @@
                 <p class="text-gray-600 pt-5 text-sm leading-relaxed">
                     {{ $item['deskripsi'] }}
                 </p>
+
                 <div class="flex justify-end mt-4">
                     <span class="text-xs px-3 py-1 bg-blue-500 text-white rounded-2xl hover:bg-blue-400 transition">
                         Detail

@@ -8,7 +8,6 @@ use Illuminate\Http\RedirectResponse;
 
 class PageController extends Controller
 {
-    // FORM LOGIN
     public function login(): View
     {
         return view('login');
@@ -29,7 +28,7 @@ class PageController extends Controller
 
     public function dashboard(Request $request): View
     {
-        $username = $request->session()->get('username', 'Guest');
+        $username = $request->session()->get('username', 'tamu');
 
         $statistik = [
             ['judul' => 'Total tayangan', 'nilai' => 300, 'status' => 'Medium'],
@@ -44,7 +43,7 @@ class PageController extends Controller
 
     public function profile(Request $request): View
     {
-        $username = $request->session()->get('username', 'Guest');
+        $username = $request->session()->get('username', 'tamu');
 
         $bio = [
             ['Alamat' => 'Jember', 'Status' => 'Seorang Pengembara', 'Fans' => 'Tenki No Ko']
@@ -55,7 +54,7 @@ class PageController extends Controller
 
     public function pengelolaan(Request $request): View
     {
-        $username = $request->session()->get('username', 'Guest');
+        $username = $request->session()->get('username', 'tamu');
 
         $data = [
             ['judul' => 'Tenki No Ko 1', 'deskripsi' => 'Episode Pertama yang seru'],

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Login')
+
 @section('content')
 <div class="hero flex items-center justify-center h-screen">
     <div class="rounded-lg bg-white/50 p-10 shadow-md max-w-md w-full text-center">

@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('title', 'Profil Anda')
+
 @section('content')
 <div class="px-5 py-8 flex justify-center">
 
