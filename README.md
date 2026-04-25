@@ -1,16 +1,16 @@
 ## Pengelolaan Anime Tenki No Ko
 ### Gambar Website :
 <h2>Login</h2>
-<img src="asset/readme/login.png" alt="Login" width="500">
+<img src="asset/readme/login.png" alt="Login">
 
 <h2>Dashboard</h2>
-<img src="asset/readme/dashboard.png" alt="Dashboard" width="500">
+<img src="asset/readme/dashboard.png" alt="Dashboard">
 
 <h2>Profil</h2>
-<img src="asset/readme/profil.png" alt="Profil" width="500">
+<img src="asset/readme/profil.png" alt="Profil">
 
 <h2>Pengelolaan</h2>
-<img src="asset/readme/pengelolaan.png" alt="Pengelolaan" width="500">
+<img src="asset/readme/pengelolaan.png" alt="Pengelolaan">
 
 ### Deskripsi :
 <p style="text-align: justify;" >
