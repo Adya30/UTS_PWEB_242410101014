@@ -18,7 +18,7 @@
     @yield('content')
 </div>
 
-@if(isset($username) && $username != 'Guest')
+@if(isset($username) && $username != 'tamu')
     @include('components.footer')
 @endif
 
