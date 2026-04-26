@@ -5,15 +5,15 @@
         <img src="{{ asset('images/logo.png') }}" class="h-10 border-2 border-white rounded-full">
 
         <div class="flex gap-6 absolute left-1/2 transform -translate-x-1/2">
-            <a href="/dashboard" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
+            <a href="{{ route('dashboard', ['username' => $username]) }}" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
                 <i class="fa-solid fa-house"></i>
                 Dashboard
             </a>
-            <a href="/profile" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
+            <a href="{{ route('profile', ['username' => $username]) }}" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
                 <i class="fa-solid fa-user"></i>
                 Profile
             </a>
-            <a href="/pengelolaan" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
+            <a href="{{ route('pengelolaan', ['username' => $username]) }}" class="flex items-center gap-2 hover:bg-blue-600 p-2 rounded-lg">
                 <i class="fa-solid fa-gear"></i>
                 Pengelolaan
             </a>

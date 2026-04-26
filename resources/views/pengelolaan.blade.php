@@ -10,6 +10,7 @@
             <div>
                 <h2 class="text-2xl font-bold">Pengelolaan Episode</h2>
                 <p class="pt-2">Daftar Episode Anime Tenki No Ko</p>
+                <p class="font-bold">{{ $username }}</p>
             </div>
             <a href="/pengelolaan" class="bg-blue-700 px-4 py-2 rounded-3xl shadow hover:bg-blue-600 transition">Tambah</a>
         </div>

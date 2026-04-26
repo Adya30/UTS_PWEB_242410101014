@@ -21,14 +21,16 @@ class PageController extends Controller
             return back()->with('error', 'Username wajib diisi!');
         }
 
-        $request->session()->put('username', $username);
-
-        return redirect('/dashboard');
+        return redirect()->route('dashboard', ['username' => $username]);
     }
 
-    public function dashboard(Request $request): View
+    public function dashboard(Request $request): View|RedirectResponse
     {
-        $username = $request->session()->get('username', 'tamu');
+        $username = $request->input('username');
+
+        if (!$username) {
+            return redirect()->route('login.form');
+        }
 
         $statistik = [
             ['judul' => 'Total tayangan', 'nilai' => 300, 'status' => 'Medium'],
@@ -41,9 +43,13 @@ class PageController extends Controller
         return view('dashboard', compact('username', 'statistik'));
     }
 
-    public function profile(Request $request): View
+    public function profile(Request $request): View|RedirectResponse
     {
-        $username = $request->session()->get('username', 'tamu');
+        $username = $request->input('username');
+
+        if (!$username) {
+            return redirect()->route('login.form');
+        }
 
         $bio = [
             ['Alamat' => 'Jember', 'Status' => 'Seorang Pengembara', 'Fans' => 'Tenki No Ko']
@@ -52,23 +58,25 @@ class PageController extends Controller
         return view('profile', compact('username', 'bio'));
     }
 
-    public function pengelolaan(Request $request): View
+    public function pengelolaan(Request $request): View|RedirectResponse
     {
-        $username = $request->session()->get('username', 'tamu');
+        $username = $request->input('username');
+
+        if (!$username) {
+            return redirect()->route('login.form');
+        }
 
         $data = [
             ['judul' => 'Tenki No Ko 1', 'deskripsi' => 'Episode Pertama yang seru'],
             ['judul' => 'Tenki No Ko 2', 'deskripsi' => 'Episode Kedua yang seru'],
-            ['judul' => 'Tenki No Ko 3', 'deskripsi' => 'Episode Keempat yang seru'],
+            ['judul' => 'Tenki No Ko 3', 'deskripsi' => 'Episode Ketiga yang seru'],
         ];
 
         return view('pengelolaan', compact('data', 'username'));
     }
 
-    public function logout(Request $request): RedirectResponse
+    public function logout(): RedirectResponse
     {
-        $request->session()->flush();
-
-        return redirect('/');
+        return redirect()->route('login.form');
     }
 }

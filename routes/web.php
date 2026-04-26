@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 
 Route::get('/', [PageController::class, 'login'])->name('login.form');
-
 Route::post('/login', [PageController::class, 'proses'])->name('login.process');
 
 Route::get('/dashboard', [PageController::class, 'dashboard'])->name('dashboard');
