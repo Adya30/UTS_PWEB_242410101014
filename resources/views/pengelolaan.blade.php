@@ -10,9 +10,9 @@
             <div>
                 <h2 class="text-2xl font-bold">Pengelolaan Episode</h2>
                 <p class="pt-2">Daftar Episode Anime Tenki No Ko</p>
-                <p class="font-bold">{{ $username }}</p>
+                <p class="font-bold">Halo, {{ $username }}</p>
             </div>
-            <a href="/pengelolaan" class="bg-blue-700 px-4 py-2 rounded-3xl shadow hover:bg-blue-600 transition">Tambah</a>
+            <a href="{{ route('pengelolaan', ['username' => $username]) }}" class="bg-blue-700 px-4 py-2 rounded-3xl shadow hover:bg-blue-600 transition">Tambah</a>
         </div>
     </div>
 

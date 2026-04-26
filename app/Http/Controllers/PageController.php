@@ -69,7 +69,7 @@ class PageController extends Controller
         $data = [
             ['judul' => 'Tenki No Ko 1', 'deskripsi' => 'Episode Pertama yang seru'],
             ['judul' => 'Tenki No Ko 2', 'deskripsi' => 'Episode Kedua yang seru'],
-            ['judul' => 'Tenki No Ko 3', 'deskripsi' => 'Episode Ketiga yang seru'],
+            ['judul' => 'Tenki No Ko 3', 'deskripsi' => 'Episode Ketiga yang seru']
         ];
 
         return view('pengelolaan', compact('data', 'username'));
